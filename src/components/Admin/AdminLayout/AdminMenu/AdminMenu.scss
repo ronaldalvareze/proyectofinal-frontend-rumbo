@@ -1,0 +1,35 @@
+@import "../../../../scss/index.scss";
+
+.ui.menu.admin-menu {
+  > .item {
+    display: flex;
+    color: $text-light;
+    padding: 15px 20px !important;
+    margin: 0 !important;
+    border-radius: 0 !important;
+
+    &:hover,
+    &.active,
+    &.active:hover {
+      color: $text-light;
+      background-color: $background-dark-web;
+    }
+
+    > i {
+      margin: 0 !important;
+      margin-right: 10px !important;
+    }
+  }
+
+  // Estilos para pantallas más pequeñas (menos de 768px)
+  @media (max-width: 767px) {
+    flex-direction: column; // Cambia la dirección del flex a columna
+    align-items: stretch; // Ajusta los elementos para ocupar todo el ancho
+    text-align: center; // Centra el texto
+    margin-bottom: 10px; // Añade un espacio entre elementos
+    
+    > .item {
+      margin: 0 !important;
+    }
+  }
+}

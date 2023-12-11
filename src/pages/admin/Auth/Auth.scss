@@ -1,0 +1,80 @@
+@import"/src/scss/index.scss";
+
+.auth {
+    background: linear-gradient(to bottom,  #1c224f0a,$background-dark-web);
+    background-size: cover;
+    min-height: 100vh;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-top:0;
+    margin-top: auto;
+
+    .logo{
+        width: 100px;
+        margin-bottom: 5px;
+    }
+
+    &_form {
+        width: 400px;
+    }
+
+    .ui.menu {
+        .item {
+            width: 50%;
+            justify-content: center;
+            background-color: #fff !important;
+            border-radius: 0 !important;
+            border-top:  4px solid $border-blue !important;
+            font-size: 18px;
+        }
+
+        .active {
+            font-weight:  normal;
+            border-radius: 0 !important;
+            border-top-color: $primary !important;
+        }
+    }
+
+}
+
+@media (max-width: 280px) {
+    .auth {
+        width: 100%;
+    }
+
+    .auth_form {
+        width: 250px;
+    }
+}
+
+@media(max-width: 320px) {
+    .auth {
+        width: 100%;
+    }
+
+    .auth_form {
+    width: 300%;
+    }
+}
+
+@media (max-width: 390px) {
+    .auth {
+        width: 100%;
+    }
+
+    .auth_form {
+        width: 250px;
+    }
+}
+
+@media (max-width:500px) {
+    .auth {
+        width: 100%;
+    }
+
+    .auth_form {
+        width: 250px;
+    }
+}

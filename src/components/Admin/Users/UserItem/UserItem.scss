@@ -1,0 +1,60 @@
+@import "../../../../scss/index.scss";
+
+.user-item {
+    display: flex;
+    flex-direction: column; /* Cambia a disposición de columna en pantallas pequeñas */
+    align-items: flex-start; /* Alinea los elementos a la izquierda en pantallas pequeñas */
+    border-bottom: 1px solid #e4e4e4;
+    margin-bottom: 10px;
+    padding-bottom: 10px; /* Añade un espacio inferior general */
+
+    &:last-of-type {
+        margin-bottom: 0;
+        padding-bottom: 0;
+        border: 0;
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: column; /* Cambia a disposición de columna en pantallas pequeñas */
+        align-items: flex-start; /* Alinea los elementos a la izquierda en pantallas pequeñas */
+
+        & > .ui.image {
+            width: 40px;
+            height: 40px;
+            margin-right: 0; /* Elimina el margen derecho en pantallas pequeñas */
+            margin-bottom: 10px; /* Añade espacio inferior entre la imagen y el texto */
+        }
+
+        p {
+            margin: 0;
+            &:first-of-type {
+                font-weight: bold;
+                margin-bottom: 5px; /* Añade espacio entre el texto principal y el secundario */
+            }
+            &:last-of-type {
+                opacity: 0.4;
+            }
+        }
+    }
+
+    @media (min-width: 768px) {
+        flex-direction: row; /* Cambia de nuevo a disposición de fila en pantallas más grandes */
+        align-items: center; /* Alinea los elementos al centro en pantallas más grandes */
+
+        &__info {
+            flex-direction: row; /* Cambia de nuevo a disposición de fila en pantallas más grandes */
+
+            & > .ui.image {
+                margin-right: 10px;
+                margin-bottom: 0; /* Elimina el espacio inferior en pantallas más grandes */
+            }
+
+            p {
+                &:first-of-type {
+                    margin-bottom: 0; /* Elimina el espacio inferior entre el texto principal y el secundario en pantallas más grandes */
+                }
+            }
+        }
+    }
+}

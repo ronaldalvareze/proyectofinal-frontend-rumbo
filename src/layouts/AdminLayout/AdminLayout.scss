@@ -1,0 +1,71 @@
+@import "../../scss/index.scss";
+
+.admin-layout {
+  display: flex;
+  min-height: 100vh;
+  max-height: 100vh;
+  background-color: $text-light;
+  background-image: url(../../assets/png/login-banner-bg.png);
+
+  &__left {
+    background-color: $background-dark;
+    width: $widthLeftMenu;
+
+    .logo {
+      height: 40px;
+      width: 80%;
+      margin: 20px 10%;
+    }
+  }
+
+  &__right {
+    width: calc(100% - $widthLeftMenu);
+
+    &-header {
+      background-color: $primary;
+      height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      padding: 0 20px;
+      box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+
+      @media (max-width: 767px) {
+        justify-content: center;
+      }
+    }
+
+    &-content {
+      position: relative;
+      margin: 20px;
+      background-color: $text-light;
+      border-radius: 8px;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+
+      @media (max-width: 767px) {
+        margin: 10px;
+      }
+    }
+  }
+
+  @media (max-width: 767px) {
+    flex-direction: column; // Cambia la dirección del flex a columna para pantallas más pequeñas
+    &__left,
+    &__right {
+      width: 100%; // Ocupa todo el ancho en pantallas más pequeñas
+    }
+
+    &__left {
+      .logo {
+        width: 60%; // Reduzca el ancho del logo para pantallas más pequeñas
+      }
+    }
+
+    &__right {
+      &-header {
+        justify-content: center; // Centra los elementos en el header para pantallas más pequeñas
+      }
+    }
+  }
+}

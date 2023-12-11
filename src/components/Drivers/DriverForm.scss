@@ -1,0 +1,39 @@
+.Driver-Form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  max-width: 100%;
+
+  .field {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+
+    &.two-fields {
+      justify-content: space-between;
+      flex-direction: row;
+
+      .input {
+        margin-right: 10px;
+        margin-bottom: 0; // Elimina el margen inferior en modo horizontal
+      }
+    }
+  }
+
+  .nuevo-formulario__error {
+    color: red;
+    text-align: center;
+  }
+
+  .ui.button {
+    justify-content: center;
+  }
+  
+ 
+  @media (min-width: 768px) {
+    .field {
+      flex-direction: row;
+    }
+  }
+}

@@ -1,0 +1,40 @@
+.Car-Form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 100%;
+
+  .field {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+
+    &.two-fields {
+      flex-direction: row;
+
+      .input {
+        margin-right: 10px;
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .nuevo-formulario__error {
+    color: red;
+    text-align: center;
+    margin-top: 10px; // Agregamos espacio entre el error y el botón
+  }
+
+  .ui.button {
+    margin-top: 10px;
+    max-width: 100%;
+    align-self: center; // Centramos el botón
+  }
+
+  // Media query para hacer el formulario responsivo
+  @media (min-width: 768px) {
+    .field {
+      flex-direction: row;
+    }
+  }
+}

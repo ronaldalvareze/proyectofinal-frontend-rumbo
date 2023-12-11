@@ -1,0 +1,22 @@
+.users-page {
+    &__add {
+        position: absolute;
+        right: 0;
+        top: 0;
+
+        > .ui.button {
+            margin: 0;
+        }
+    }
+
+
+@media (max-width: 768px) {
+    // Estilos para pantallas con un ancho máximo de 768px
+    // Por ejemplo, cambiar la posición del botón o ajustar el tamaño del texto
+    &__add {
+      position: static;  // Otras opciones: relative, fixed, etc.
+      top: auto;
+      margin-bottom: 10px;  // Ajusta el margen inferior según sea necesario
+    }
+  }
+}
